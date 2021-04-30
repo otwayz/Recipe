@@ -33,6 +33,10 @@
             android:name=".common.SignUpActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ingredient.IngredientDetailActivity"
+            android:label="详情"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ActionBar.White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/icon_back_dark" />
+
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="名称"
+        android:textColor="@color/color_666666"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/label_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_name"
+        app:layout_constraintTop_toTopOf="@id/label_name"
+        tools:text="金针菇" />
+
+    <TextView
+        android:id="@+id/label_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="单价"
+        android:textColor="@color/color_666666"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/label_unit"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+    <TextView
+        android:id="@+id/label_unit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="单位"
+        android:textColor="@color/color_666666"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/label_time"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/label_price"
+        app:layout_constraintTop_toTopOf="@id/label_price" />
+
+    <TextView
+        android:id="@+id/label_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="时间"
+        android:textColor="@color/color_666666"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/label_unit"
+        app:layout_constraintTop_toTopOf="@id/label_unit" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_price" />
+
+    <EditText
+        android:id="@+id/et_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:hint="0.00"
+        android:lines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/label_price"
+        app:layout_constraintStart_toStartOf="@id/label_price"
+        app:layout_constraintTop_toBottomOf="@id/rv" />
+
+    <EditText
+        android:id="@+id/et_unit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:hint="kg"
+        android:lines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/label_unit"
+        app:layout_constraintStart_toStartOf="@id/label_unit"
+        app:layout_constraintTop_toBottomOf="@id/rv" />
+
+    <EditText
+        android:id="@+id/et_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:hint="创建时间"
+        android:lines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/label_time"
+        app:layout_constraintStart_toStartOf="@id/label_time"
+        app:layout_constraintTop_toBottomOf="@id/rv" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/icon_floating_add"
+        app:layout_constraintBottom_toBottomOf="@id/et_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_time" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_rect_bebebe"
+        android:lines="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_price" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
